@@ -1,6 +1,12 @@
-let posts = []
+let abc = [];
+
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((response) => response.json())
-  .then((elements) => elements.forEach((element) => posts.push(element)));
+  .then((arrayOfObjects) =>
+    arrayOfObjects.forEach((element) => {
+      abc.push(element);
+    })
+  )
+  .catch((error) => console.log(error));
 
-console.log(posts)
+console.log({posts});
